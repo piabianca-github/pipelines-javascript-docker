@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: piabiancagithubpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: piabiancagithubpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: piabiancagithubpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: piabiancagithubpipelinesjavascriptdocker 
+          image: mycontainerregistry1216.azurecr.io/piabiancagithubpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
